@@ -99,11 +99,11 @@
 #       "Hello, #{who}!"
 #     end
 #
-require "hello"
+require "hello"#{on appel le fichier hello dans le même dossier (.rb)}
 
-describe "the hello function" do
-  it "says hello" do
-    expect(hello).to eq("Hello!")
+describe "the hello function" do #describe = puts, mais c'est pour dire à "rake" que c'est le début d'un test.
+  it "ca fonctionne" do   # si la fonction (hello) sort "Hello!", rake renvoie "ca fonctionne" pour dire que le test est bon. C'est une info perso.
+    expect(hello).to eq("Hello!") # eq("Hello!")= sortie qu'on attend. J'attend que en appellant la fonction (hello), je sorte la string "Hello!"
   end
 end
 
